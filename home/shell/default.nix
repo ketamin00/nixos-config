@@ -23,6 +23,7 @@
     ./lazygit.nix
     ./zsh.nix
     ./playerctl.nix
+    ./git.nix
   ];
 
 }

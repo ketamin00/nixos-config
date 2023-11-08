@@ -24,6 +24,7 @@
     ./waybar.nix
     ./wofi.nix
     ./vscode.nix
+    ./fonts.nix
   ];
 
 }
