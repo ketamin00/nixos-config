@@ -11,6 +11,7 @@
       mkhl.direnv
       ms-vscode.cpptools
       vscodevim.vim
+      jnoortheen.nix-ide
     ];
   };
 }
