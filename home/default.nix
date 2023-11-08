@@ -7,19 +7,6 @@
 
 
   home.packages = with pkgs; [
-    neofetch
-    wl-clipboard
-    zip
-    xz
-    unzip
-    p7zip
-    ripgrep
-    jq
-    dnsutils
-    file
-    which
-    tree
-    bottom
     (nerdfonts.override {fonts = [ "JetBrainsMono" "FiraCode" ];})
   ];
   fonts.fontconfig.enable = true;
