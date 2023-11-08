@@ -1,5 +1,4 @@
 { config, pkgs, colors, ...}:
-in
 {
   programs.wofi = {
     enable = true;
