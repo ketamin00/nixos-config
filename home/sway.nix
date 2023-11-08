@@ -102,32 +102,32 @@ in
 
         colors = {
           focused = {
-            border = color.green;
-            background = color.green;
-            text = color.gray;
-            indicator = color.purple;
-            childBorder = color.green;
+            border = colors.green;
+            background = colors.green;
+            text = colors.gray;
+            indicator = colors.purple;
+            childBorder = colors.green;
          };
           focusedInactive = {
-            border = color.gray;
-            background = color.gray;
-            text = color.yellow;
-            indicator = color.purple;
-            childBorder = color.gray;
+            border = colors.gray;
+            background = colors.gray;
+            text = colors.yellow;
+            indicator = colors.purple;
+            childBorder = colors.gray;
           };
           unfocused = {
-            border = color.gray;
-            background = color.gray;
-            text = color.yellow;
-            indicator = color.purple;
-            childBorder = color.gray;
+            border = colors.gray;
+            background = colors.gray;
+            text = colors.yellow;
+            indicator = colors.purple;
+            childBorder = colors.gray;
           };
           urgent = {
-            border = color.red;
-            background = color.red;
-            text = color.fg;
-            indicator = color.red;
-            childBorder = color.red;
+            border = colors.red;
+            background = colors.red;
+            text = colors.fg;
+            indicator = colors.red;
+            childBorder = colors.red;
           };
         };
   
