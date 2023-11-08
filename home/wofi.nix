@@ -1,5 +1,4 @@
-{ config, pkgs, ...}:
-let theme = import ./colors.nix;
+{ config, pkgs, colors, ...}:
 in
 {
   programs.wofi = {
@@ -17,27 +16,27 @@ in
       }
       window {
 	margin: 0px;
-	border: 1px solid ${theme.blue};
-	background-color: ${theme.bg};
+	border: 1px solid ${colors.blue};
+	background-color: ${colors.bg};
 	}
 
 	#input {
 	margin: 5px;
 	border: none;
-	color: ${theme.fg};
-	background-color: ${theme.bg0_h};
+	color: ${colors.fg};
+	background-color: ${colors.bg0_h};
 	}
 
 	#inner-box {
 	margin: 5px;
 	border: none;
-	background-color: ${theme.bg};
+	background-color: ${colors.bg};
 	}
 
 	#outer-box {
 	margin: 5px;
 	border: none;
-	background-color: ${theme.bg};
+	background-color: ${colors.bg};
 	}
 
 	#scroll {
@@ -48,11 +47,11 @@ in
 	#text {
 	margin: 5px;
 	border: none;
-	color: ${theme.fg};
+	color: ${colors.fg};
 	}
 
 	#entry:selected {
-	background-color: ${theme.bg0_h};
+	background-color: ${colors.bg0_h};
 	}
     '';
   };
