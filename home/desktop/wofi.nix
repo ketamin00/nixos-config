@@ -10,10 +10,10 @@
       prompt = "";
     };
     style = ''
-            * {
-                font-family: JetBrainsMono Nerd Font;
-            }
-            window {
+        * {
+        font-family: JetBrainsMono Nerd Font;
+        }
+        window {
       	margin: 0px;
       	border: 1px solid ${colors.blue};
       	background-color: ${colors.bg};
