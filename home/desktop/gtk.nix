@@ -1,5 +1,13 @@
 { config, pkgs, ... }:
 {
+
+
+  home.packages = with pkgs; [
+    gruvbox-gtk-theme
+    simp1e-cursors
+    gruvbox-dark-icons-gtk
+  ];
+
   gtk = {
     enable = true;
     theme = {

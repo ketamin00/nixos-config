@@ -6,6 +6,7 @@
     ./direnv.nix
     ./lazygit.nix
     ./zsh.nix
+    ./playerctl.nix
   ];
 
 }

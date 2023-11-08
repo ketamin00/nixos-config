@@ -31,9 +31,6 @@
     shared-mime-info
     lxmenu-data
 
-    gruvbox-gtk-theme
-    simp1e-cursors
-    gruvbox-dark-icons-gtk
 
     signal-desktop
     pcmanfm
@@ -50,13 +47,8 @@
   };
 
   imports = [
-    ./sway.nix
-    ./wofi.nix
-    ./waybar.nix
-    ./gtk.nix
-    ./vscode.nix
-    ./playerctl.nix
-    ./terminal
+    ./desktop
+    ./shell
   ];
 
 }
