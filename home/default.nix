@@ -3,6 +3,5 @@
 
   imports = [
     ./home.nix
-  ]
-
+  ];
 }
