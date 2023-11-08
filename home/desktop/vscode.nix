@@ -16,6 +16,7 @@
       ms-vscode.cpptools
       vscodevim.vim
       jnoortheen.nix-ide
+      ChaitanyaShahare.lazygit
     ];
   };
 }
