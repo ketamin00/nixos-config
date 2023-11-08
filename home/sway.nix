@@ -3,6 +3,7 @@ let
   wallpaper = pkgs.copyPathToStore ./bg.png;
   wallpaper2 = pkgs.copyPathToStore ./bg2.png;
   powermenu = pkgs.copyPathToStore ./power.sh;
+  let theme = colors;
 in
 {
     wayland.windowManager.sway = {
@@ -102,32 +103,32 @@ in
 
         colors = {
           focused = {
-            border = colors.green;
-            background = colors.green;
-            text = colors.gray;
-            indicator = colors.purple;
-            childBorder = colors.green;
+            border = theme.green;
+            background = theme.green;
+            text = theme.gray;
+            indicator = theme.purple;
+            childBorder = theme.green;
          };
           focusedInactive = {
-            border = colors.gray;
-            background = colors.gray;
-            text = colors.yellow;
-            indicator = colors.purple;
-            childBorder = colors.gray;
+            border = theme.gray;
+            background = theme.gray;
+            text = theme.yellow;
+            indicator = theme.purple;
+            childBorder = theme.gray;
           };
           unfocused = {
-            border = colors.gray;
-            background = colors.gray;
-            text = colors.yellow;
-            indicator = colors.purple;
-            childBorder = colors.gray;
+            border = theme.gray;
+            background = theme.gray;
+            text = theme.yellow;
+            indicator = theme.purple;
+            childBorder = theme.gray;
           };
           urgent = {
-            border = colors.red;
-            background = colors.red;
-            text = colors.fg;
-            indicator = colors.red;
-            childBorder = colors.red;
+            border = theme.red;
+            background = theme.red;
+            text = theme.fg;
+            indicator = theme.red;
+            childBorder = theme.red;
           };
         };
   
