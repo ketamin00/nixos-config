@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   home.stateVersion = "23.05";
   home.username = "julius";
@@ -52,14 +51,12 @@
 
   imports = [
     ./sway.nix
-    ./alacritty.nix
     ./wofi.nix
     ./waybar.nix
-    ./zsh.nix
     ./gtk.nix
     ./vscode.nix
-    ./direnv.nix
     ./playerctl.nix
-    ./lazygit.nix
+    ./terminal
   ];
+
 }

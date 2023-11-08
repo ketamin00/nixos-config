@@ -12,6 +12,7 @@
     let
       system = "x86_64-linux";
       unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true;};
+      colors = import ./colors.nix;
     in
     {
       nixosConfigurations = {
@@ -23,8 +24,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.julius = import ./home/home.nix;
-  	      home-manager.extraSpecialArgs = { inherit unstable; };
+              home-manager.users.julius = import ./home;
+  	      home-manager.extraSpecialArgs = { inherit unstable colors; };
             }
           ];
         };
