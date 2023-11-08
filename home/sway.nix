@@ -1,6 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, colors, ... }:
 let
-  theme = import ./colors.nix;
   wallpaper = pkgs.copyPathToStore ./bg.png;
   wallpaper2 = pkgs.copyPathToStore ./bg2.png;
   powermenu = pkgs.copyPathToStore ./power.sh;
@@ -103,32 +102,32 @@ in
 
         colors = {
           focused = {
-            border = theme.green;
-            background = theme.green;
-            text = theme.gray;
-            indicator = theme.purple;
-            childBorder = theme.green;
+            border = color.green;
+            background = color.green;
+            text = color.gray;
+            indicator = color.purple;
+            childBorder = color.green;
          };
           focusedInactive = {
-            border = theme.gray;
-            background = theme.gray;
-            text = theme.yellow;
-            indicator = theme.purple;
-            childBorder = theme.gray;
+            border = color.gray;
+            background = color.gray;
+            text = color.yellow;
+            indicator = color.purple;
+            childBorder = color.gray;
           };
           unfocused = {
-            border = theme.gray;
-            background = theme.gray;
-            text = theme.yellow;
-            indicator = theme.purple;
-            childBorder = theme.gray;
+            border = color.gray;
+            background = color.gray;
+            text = color.yellow;
+            indicator = color.purple;
+            childBorder = color.gray;
           };
           urgent = {
-            border = theme.red;
-            background = theme.red;
-            text = theme.fg;
-            indicator = theme.red;
-            childBorder = theme.red;
+            border = color.red;
+            background = color.red;
+            text = color.fg;
+            indicator = color.red;
+            childBorder = color.red;
           };
         };
   
