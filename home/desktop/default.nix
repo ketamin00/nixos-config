@@ -1,5 +1,22 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    firefox
+    signal-desktop
+    spotify
+
+    blueman
+    pavucontrol
+
+    pcmanfm
+    lxmenu-data
+    shared-mime-info
+
+
+    xdg-utils
+    grim
+    slurp
+  ];
 
   imports = [
     ./gtk.nix

@@ -7,10 +7,8 @@
 
 
   home.packages = with pkgs; [
-    firefox
     neofetch
     wl-clipboard
-    xdg-utils
     zip
     xz
     unzip
@@ -22,20 +20,6 @@
     which
     tree
     bottom
-    grim
-    slurp
-    pavucontrol
-    blueman
-    swaybg
-
-    shared-mime-info
-    lxmenu-data
-
-
-    signal-desktop
-    pcmanfm
-
-    spotify
     (nerdfonts.override {fonts = [ "JetBrainsMono" "FiraCode" ];})
   ];
   fonts.fontconfig.enable = true;
