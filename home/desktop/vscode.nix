@@ -1,5 +1,8 @@
 { config, pkgs, unstable, ... }:
 {
+  home.packages = with pkgs; [
+    nixpkgs-fmt
+  ];
   programs.vscode = {
     enable = true;
     userSettings = {

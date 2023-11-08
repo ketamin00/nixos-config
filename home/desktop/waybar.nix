@@ -6,32 +6,32 @@
     settings = [
       {
         spacing = 10;
-	fixed-center = true;
-	modules-left = [
+	      fixed-center = true;
+	      modules-left = [
           "sway/workspaces"
-	  "sway/mode"
+	        "sway/mode"
 	  "memory"
 	  "cpu"
 	  "temperature"
 	  "sway/scratchpad"
 	];
 	modules-center = [
-          "sway/window"
+    "sway/window"
 	];
 	modules-right = [
 	  "bluetooth"
-          "pulseaudio"
+    "pulseaudio"
 	  "clock"
 	];
 	"sway/workspaces" = {
 	  format = "|{icon}|";
 	};
 	"sway/mode" = {
-          format = "[{}]";
+    format = "[{}]";
 	};
 	"clock" = {
 	  format = "{: %H:%M}";
-          format-alt = "{: %A %d/%m/%y  %H:%M}";
+    format-alt = "{: %A %d/%m/%y  %H:%M}";
 	  tooltip-format = "<tt><small>{calendar}</small></tt>";
 	};
 	"sway/scratchpad" = {
