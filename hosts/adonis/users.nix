@@ -5,7 +5,7 @@
   users.users.julius = {
     isNormalUser = true;
     description = "Julius";
-    extraGroups = [ "networkmanager" "wheel" "docker" "storage" "disk"];
+    extraGroups = [ "networkmanager" "wheel" "docker" "storage" "disk" ];
     shell = pkgs.zsh;
   };
 }

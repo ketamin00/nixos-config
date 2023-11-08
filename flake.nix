@@ -8,16 +8,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true;};
+      unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
       colors = import ./colors.nix;
     in
     {
       nixosConfigurations = {
         "adonis" = nixpkgs.lib.nixosSystem {
-	  inherit system;
+          inherit system;
           modules = [
             ./hosts/adonis
             home-manager.nixosModules.home-manager
@@ -25,10 +25,10 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.julius = import ./home;
-  	      home-manager.extraSpecialArgs = { inherit unstable colors; };
+              home-manager.extraSpecialArgs = { inherit unstable colors; };
             }
           ];
         };
       };
-  };
+    };
 }
