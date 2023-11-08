@@ -8,7 +8,7 @@
     userSettings = {
       "window.titleBarStyle" = "custom";
     };
-    mutableExtensionsDir = true;
+    mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
       jdinhlife.gruvbox
       mkhl.direnv
