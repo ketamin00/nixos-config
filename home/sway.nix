@@ -3,7 +3,7 @@ let
   wallpaper = pkgs.copyPathToStore ./bg.png;
   wallpaper2 = pkgs.copyPathToStore ./bg2.png;
   powermenu = pkgs.copyPathToStore ./power.sh;
-  let theme = colors;
+  theme = colors;
 in
 {
     wayland.windowManager.sway = {
