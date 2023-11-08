@@ -7,6 +7,7 @@
     enable = true;
     userSettings = {
       "window.titleBarStyle" = "custom";
+      "workbench.colorTheme" = "Gruvbox Dark Hard"
     };
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
