@@ -27,6 +27,7 @@
     ./wofi.nix
     ./vscode.nix
     ./fonts.nix
+    ./conky.nix
   ];
 
 }
