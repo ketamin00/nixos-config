@@ -24,6 +24,7 @@
     ./zsh.nix
     ./playerctl.nix
     ./git.nix
+    ./astronvim.nix
   ];
 
 }

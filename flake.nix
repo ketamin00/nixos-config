@@ -4,7 +4,7 @@
     nixpkgs.url = "nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     astronvim = {
-      url = "github:AstroNvim/AstroNvim"
+      url = "github:AstroNvim/AstroNvim";
       flake = false;
     };
     home-manager = {
@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, astronvim, ... }@inputs:
     let
       system = "x86_64-linux";
       unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
