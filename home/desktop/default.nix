@@ -16,6 +16,8 @@
     xdg-utils
     grim
     slurp
+
+    openrgb-with-all-plugins
   ];
 
   imports = [
