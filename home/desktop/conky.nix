@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, unstable, ...}:
 
 {
   imports = [
@@ -6,4 +6,5 @@
   ];
 
   programs.conky.enable = true;
+  programs.conky.package = unstable.conky;
 }
