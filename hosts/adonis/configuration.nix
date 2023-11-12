@@ -20,6 +20,7 @@
       ./greetd.nix
       ./docker.nix
       ./virtualbox.nix
+      ./openrgb.nix
     ];
 
   environment.systemPackages = with pkgs; [
