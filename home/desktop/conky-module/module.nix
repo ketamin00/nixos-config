@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 let
   cfg = config.programs.conky;
+in
 {
   options.programs.conky = {
     enable = lib.mkEnableOption "Conky desktop widget";
