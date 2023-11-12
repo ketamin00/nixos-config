@@ -3,6 +3,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    astronvim = {
+      url = "github:AstroNvim/AstroNvim"
+      flake = false;
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +29,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.julius = import ./home;
-              home-manager.extraSpecialArgs = { inherit unstable colors; };
+              home-manager.extraSpecialArgs = { inherit unstable colors astronvim; };
             }
           ];
         };
