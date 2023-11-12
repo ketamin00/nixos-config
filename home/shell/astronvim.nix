@@ -1,4 +1,4 @@
-{ config, pkgs}:
+{ config, pkgs, astronvim, ...}:
 {
   imports = [
     ./astronvim-module
