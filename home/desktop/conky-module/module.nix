@@ -21,7 +21,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = [ cfg.conky ];
+    home.packages = [ cfg.package ];
     xdg.configFile."conky/conky.conf".text = config.programs.conky.config;
 
   };
