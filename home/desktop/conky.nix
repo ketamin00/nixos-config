@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./conky.nix
+    ./conky-module.nix
   ];
 
   programs.conky.enable = true;
