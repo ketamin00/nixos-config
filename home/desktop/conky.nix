@@ -5,6 +5,6 @@
     ./conky-module
   ];
 
-  programs.conky.enable = true;
+  programs.conky.enable = false;
   programs.conky.package = unstable.conky;
 }
