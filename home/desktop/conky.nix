@@ -1,13 +1,9 @@
-{ config, lib, pkgs, ... }:
+{config, pkgs, ...}:
 
 {
-  options.programs.conky = {
-    enable = lib.mkEnableOption "Conky desktop widget";
+  imports = [
+    ./conky.nix
+  ];
 
-  };
-
-  config = lib.mkIf config.programs.conky.enable {
-    home.packages = [ pkgs.conky ];
-
-  };
+  programs.conky.enable = true;
 }

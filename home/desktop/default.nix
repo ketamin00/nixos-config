@@ -18,6 +18,7 @@
     slurp
 
     openrgb-with-all-plugins
+
   ];
 
   imports = [
