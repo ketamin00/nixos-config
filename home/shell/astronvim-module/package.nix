@@ -8,9 +8,9 @@ stdenv.mkDerivation {
   
   installPhase = ''
     export XDG_CONFIG_HOME=$TMPDIR
-    mv $src $XDG_CONFIG_HOME/nvim/
+    cp -r $src $XDG_CONFIG_HOME/nvim/
     nvim --headless -c 'quitall'
-    mv $XDG_CONFIG_HOME/nvim/ $out
+    cp -r $XDG_CONFIG_HOME/nvim/ $out
   '';
 
 }
