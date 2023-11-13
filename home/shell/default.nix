@@ -15,6 +15,7 @@
     which
     tree
     bottom
+    bat
 
   ];
   imports = [

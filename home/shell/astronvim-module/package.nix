@@ -7,6 +7,7 @@ stdenv.mkDerivation {
 
   installPhase = ''
     nvim --headless -c 'quitall'
+    mv AstroNvim/* $out
   '';
 
 }
