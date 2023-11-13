@@ -2,7 +2,7 @@
 
 let
   cfg = config.programs.astronvim;
-  package = import ./package.nix {inherit (pkgs) stdenv; inherit astronvim; };
+  package = import ./package.nix {inherit (pkgs) stdenv; inherit pkgs; inherit astronvim; };
 in
 {
   options.programs.astronvim = {
