@@ -2,6 +2,7 @@
 
 let
   cfg = config.programs.astronvim;
+  package = import ./package.nix {inherit (pkgs) stdenv; inherit astronvim; };
 in
 {
   options.programs.astronvim = {
@@ -12,6 +13,6 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [ neovim ];
 
-    home.file.".config/nvim".source = astronvim;
+    home.file.".config/nvim".source = package;
   };
 }
