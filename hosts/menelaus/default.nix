@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, outputs, lib, config, pkgs, colors, ... }:
 
 {
   imports =
@@ -21,6 +21,7 @@
       ./docker.nix
       ./virtualbox.nix
       ./openrgb.nix
+      ./home-manager.nix
     ];
 
   environment.systemPackages = with pkgs; [

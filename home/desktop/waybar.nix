@@ -1,8 +1,8 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
-    package = unstable.waybar;
+    package = pkgs.unstable.waybar;
     settings = [
       {
         spacing = 10;
