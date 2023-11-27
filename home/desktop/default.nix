@@ -28,6 +28,7 @@
     ./wofi.nix
     ./vscode.nix
     ./fonts.nix
+    ./mako.nix
   ];
 
 }

@@ -15,9 +15,6 @@
           "temperature"
           "sway/scratchpad"
         ];
-        modules-center = [
-          "sway/window"
-        ];
         modules-right = [
           "bluetooth"
           "pulseaudio"
@@ -50,6 +47,7 @@
           format = " {}%";
         };
         temperature = {
+          thermal-zone = 2;
           min-length = 6;
           critical-treshold = 80;
           format = "{icon} {temperatureC}°C";
