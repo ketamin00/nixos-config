@@ -27,5 +27,6 @@
   services.gvfs.enable = true;
 
   system.stateVersion = "23.05"; # Did you read the comment?
+  programs.sway.enable = true;
 
 }
