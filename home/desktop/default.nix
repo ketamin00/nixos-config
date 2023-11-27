@@ -17,7 +17,6 @@
     grim
     slurp
 
-    openrgb-with-all-plugins
 
   ];
 
