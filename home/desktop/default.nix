@@ -9,6 +9,7 @@
     pavucontrol
 
     pcmanfm
+    gnome.file-roller
     lxmenu-data
     shared-mime-info
 
