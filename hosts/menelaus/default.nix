@@ -3,19 +3,19 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
-      ./nvidia.nix
-      ./nix.nix
-      ./bootloader.nix
-      ./locales.nix
-      ./networking.nix
-      ./sound.nix
-      ./users.nix
-      ./wayland.nix
-      ./greetd.nix
-      ./docker.nix
-      ./virtualbox.nix
-      ./home-manager.nix
+      ../components/hardware-configuration.nix
+      ../components/nvidia.nix
+      ../components/nix.nix
+      ../components/bootloader.nix
+      ../components/locales.nix
+      ../components/networking.nix
+      ../components/sound.nix
+      ../components/users.nix
+      ../components/wayland.nix
+      ../components/greetd.nix
+      ../components/docker.nix
+      ../components/virtualbox.nix
+      ../components/home-manager.nix
     ];
 
   environment.systemPackages = with pkgs; [
