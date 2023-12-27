@@ -4,5 +4,6 @@
     enable = true;
     font = "JetBrainsMono Nerd Font";
     backgroundColor = colors.bg;
+    defaultTimeout = 10000;
   };
 }

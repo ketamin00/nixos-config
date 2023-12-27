@@ -7,7 +7,6 @@
       enable = true;
       theme = "agnoster";
     };
-    #initExtra = "eval \"\$(${pkgs.direnv}/bin/direnv hook zsh)\"";
   };
 
 }

@@ -17,6 +17,7 @@
       ms-vscode.cpptools
       vscodevim.vim
       jnoortheen.nix-ide
+      ms-python.python
     ];
   };
 }
