@@ -37,4 +37,5 @@
       pkgs.xdg-desktop-portal-wlr
     ];
   };
+  xdg.portal.config.common.default = "*";
 }
