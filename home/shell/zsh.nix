@@ -5,9 +5,8 @@
     enable = true;
     oh-my-zsh = {
       enable = true;
-      theme = "agnoster";
+      theme = "robbyrussell";
     };
-    #initExtra = "eval \"\$(${pkgs.direnv}/bin/direnv hook zsh)\"";
   };
 
 }

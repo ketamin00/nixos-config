@@ -6,6 +6,10 @@ let
   theme = colors;
 in
 {
+  home.packages = with pkgs; [
+    swaylock
+    swayidle
+  ];
   wayland.windowManager.sway = {
     enable = true;
     config = rec {
@@ -93,7 +97,28 @@ in
           "XF86AudioRaiseVolume" = "exec ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 4%+";
           "XF86AudioLowerVolume" = "exec ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 4%-";
           "XF86AudioMute" = "exec ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+
+          "Print" = "exec ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp -d)\" - | wl-copy";
+          "Shift+Print" = "exec ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp -d)\" - > ~/Pictures/Screenshots/$(date --iso-8601=s).png"; 
+
+          "${mod}+r" = "mode resize";
         };
+      modes = {
+        resize = {
+          "Left" = "resize shrink width 10px";
+          "Right" = "resize grow width 10px";
+          "Up" = "resize grow height 10px";
+          "Down" = "resize shrink height 10px";
+
+          "Shift+Left" = "resize shrink width 30px";
+          "Shift+Right" = "resize grow width 30px";
+          "Shift+Up" = "resize grow height 30px";
+          "Shift+Down" = "resize shrink height 30px";
+
+          "Escape" = "mode default";
+        };
+
+      };
 
       gaps = {
         smartGaps = true;

@@ -9,6 +9,7 @@
     pavucontrol
 
     pcmanfm
+    gnome.file-roller
     lxmenu-data
     shared-mime-info
 
@@ -17,7 +18,6 @@
     grim
     slurp
 
-    openrgb-with-all-plugins
 
   ];
 
@@ -28,6 +28,7 @@
     ./wofi.nix
     ./vscode.nix
     ./fonts.nix
+    ./mako.nix
   ];
 
 }

@@ -1,8 +1,8 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
-    package = unstable.waybar;
+    package = pkgs.unstable.waybar;
     settings = [
       {
         spacing = 10;
@@ -14,9 +14,6 @@
           "cpu"
           "temperature"
           "sway/scratchpad"
-        ];
-        modules-center = [
-          "sway/window"
         ];
         modules-right = [
           "bluetooth"
@@ -50,6 +47,7 @@
           format = " {}%";
         };
         temperature = {
+          thermal-zone = 2;
           min-length = 6;
           critical-treshold = 80;
           format = "{icon} {temperatureC}°C";

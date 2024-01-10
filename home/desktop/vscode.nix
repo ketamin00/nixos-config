@@ -1,4 +1,4 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     nixpkgs-fmt
@@ -8,6 +8,7 @@
     userSettings = {
       "window.titleBarStyle" = "custom";
       "workbench.colorTheme" = "Gruvbox Dark Hard";
+      "editor.fontFamily" = "JetBrainsMono Nerd Font";
     };
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
@@ -16,6 +17,7 @@
       ms-vscode.cpptools
       vscodevim.vim
       jnoortheen.nix-ide
+      ms-python.python
     ];
   };
 }
