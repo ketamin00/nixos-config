@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
@@ -9,11 +11,11 @@
 
   services.resolved = {
     enable = true;
-#    dnssec = "allow-downgrade";
-#    domains = [ "~." ];
-#    fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
-#    extraConfig = ''
-#      DNSOverTLS=yes
-#    '';
+    #    dnssec = "allow-downgrade";
+    #    domains = [ "~." ];
+    #    fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+    #    extraConfig = ''
+    #      DNSOverTLS=yes
+    #    '';
   };
 }

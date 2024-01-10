@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   boot.loader = {
     efi.canTouchEfiVariables = true;
     grub = {
@@ -12,5 +14,5 @@
     };
     timeout = null;
   };
-  boot.kernelParams = [ "quiet" ];
+  boot.kernelParams = ["quiet"];
 }

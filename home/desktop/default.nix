@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     firefox
     signal-desktop
@@ -13,12 +12,9 @@
     lxmenu-data
     shared-mime-info
 
-
     xdg-utils
     grim
     slurp
-
-
   ];
 
   imports = [
@@ -30,5 +26,4 @@
     ./fonts.nix
     ./mako.nix
   ];
-
 }

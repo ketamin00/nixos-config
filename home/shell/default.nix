@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     neofetch
     wl-clipboard
@@ -16,7 +18,6 @@
     tree
     bottom
     bat
-
   ];
   imports = [
     ./alacritty.nix
@@ -26,5 +27,4 @@
     ./playerctl.nix
     ./git.nix
   ];
-
 }

@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-
 {
-  services.xserver.videoDrivers = [ "nvidia" ];
+  config,
+  pkgs,
+  ...
+}: {
+  services.xserver.videoDrivers = ["nvidia"];
 
   environment = {
     variables = {
@@ -25,7 +27,7 @@
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = with pkgs; [ nvidia-vaapi-driver vaapiVdpau libvdpau-va-gl ];
+      extraPackages = with pkgs; [nvidia-vaapi-driver vaapiVdpau libvdpau-va-gl];
       # extraPackages = with pkgs: [ nvidia-vaapi-driver vaapiVdpau libvdpau-va-gl ];
     };
     nvidia = {
@@ -33,6 +35,5 @@
       powerManagement.enable = true;
       modesetting.enable = true;
     };
-
   };
 }

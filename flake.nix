@@ -10,46 +10,46 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-colors.url = "github:misterio77/nix-colors";
+    #nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-colors, ... }@inputs:
-    let
-      inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        #"aarch64-linux"
-        # "i686-linux"
-        "x86_64-linux"
-        #"aarch64-darwin"
-        #"x86_64-darwin"
-      ];
-      colors = import ./colors.nix;
-    in
-    rec {
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./pkgs { inherit pkgs; }
-      );
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    systems = [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+    colors = import ./colors.nix;
+  in {
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    overlays = import ./overlays {inherit inputs;};
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./modules/home-manager;
 
-      # Acessible through 'nix develop' or 'nix-shell' (legacy)
-      #devShells = forAllSystems (system:
-      #  let pkgs = nixpkgs.legacyPackages.${system};
-      #  in import ./shell.nix { inherit pkgs; }
-      #);
+    # Acessible through 'nix develop' or 'nix-shell' (legacy)
+    #devShells = forAllSystems (system:
+    #  let pkgs = nixpkgs.legacyPackages.${system};
+    #  in import ./shell.nix { inherit pkgs; }
+    #);
 
-      overlays = import ./overlays { inherit inputs; };
-      nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
-
-      # Available through 'nixos-rebuild --flake .#your-hostname'
-      nixosConfigurations = {
-        menelaus = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs colors; };
-          modules = [
-            ./hosts/menelaus
-          ];
-        };
+    # Available through 'nixos-rebuild --flake .#your-hostname'
+    nixosConfigurations = {
+      menelaus = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs colors;};
+        modules = [
+          ./hosts/menelaus
+        ];
       };
-
     };
+  };
 }

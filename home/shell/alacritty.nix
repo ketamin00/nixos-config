@@ -1,7 +1,10 @@
-{ config, pkgs, colors, ... }:
-let
-in
 {
+  config,
+  pkgs,
+  colors,
+  ...
+}: let
+in {
   home.packages = with pkgs; [
     alacritty
   ];

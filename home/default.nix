@@ -1,5 +1,11 @@
-{ inputs, outputs, lib, config, pkgs, ... }:
 {
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   home.stateVersion = "23.05";
   home.username = "julius";
   home.homeDirectory = "/home/julius";
@@ -11,17 +17,16 @@
   ];
 
   systemd.user.startServices = "sd-switch";
-  
+
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-
     ];
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = _: true;
     };
   };
 }

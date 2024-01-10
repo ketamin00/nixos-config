@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs = {
     direnv = {
       enable = true;
@@ -8,6 +11,5 @@
         enable = true;
       };
     };
-
   };
 }

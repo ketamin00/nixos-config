@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "julius" ];
+  users.extraGroups.vboxusers.members = ["julius"];
 }

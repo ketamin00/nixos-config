@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     oh-my-zsh = {
@@ -8,5 +10,4 @@
       theme = "robbyrussell";
     };
   };
-
 }

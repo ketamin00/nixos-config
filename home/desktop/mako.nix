@@ -1,5 +1,9 @@
-{ config, pkgs, colors, ... }:
 {
+  config,
+  pkgs,
+  colors,
+  ...
+}: {
   services.mako = {
     enable = true;
     font = "JetBrainsMono Nerd Font";
