@@ -2,11 +2,11 @@
   description = "Ketamin NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.05";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -32,10 +32,10 @@
       );
 
       # Acessible through 'nix develop' or 'nix-shell' (legacy)
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./shell.nix { inherit pkgs; }
-      );
+      #devShells = forAllSystems (system:
+      #  let pkgs = nixpkgs.legacyPackages.${system};
+      #  in import ./shell.nix { inherit pkgs; }
+      #);
 
       overlays = import ./overlays { inherit inputs; };
       nixosModules = import ./modules/nixos;
