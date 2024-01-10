@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    firefox
     signal-desktop
     spotify
 
@@ -16,6 +15,7 @@
     grim
     slurp
   ];
+  programs.firefox.enable = true;
 
   imports = [
     ./gtk.nix
