@@ -29,4 +29,20 @@
       allowUnfreePredicate = _: true;
     };
   };
+
+  xdg = {
+    enable = true;
+    mime.enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "x-scheme-handler/http" = ["firefox.desktop"];
+	"x-scheme-handler/https" = "firefox.desktop";
+      };
+    };
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
 }
