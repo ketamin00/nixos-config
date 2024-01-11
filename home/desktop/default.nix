@@ -14,12 +14,16 @@
     xdg-utils
     grim
     slurp
+
+    libnotify
   ];
   programs.firefox.enable = true;
 
   imports = [
     ./gtk.nix
     ./sway.nix
+    ./swaylock.nix
+    ./swayidle.nix
     ./waybar.nix
     ./wofi.nix
     ./vscode.nix

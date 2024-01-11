@@ -31,5 +31,7 @@
   ];
   services.gvfs.enable = true;
 
+  security.pam.services.swaylock = {};
+
   system.stateVersion = "23.05"; # Did you read the comment?
 }

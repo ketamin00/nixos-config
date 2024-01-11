@@ -9,10 +9,6 @@
   powermenu = pkgs.copyPathToStore ./power.sh;
   theme = colors;
 in {
-  home.packages = with pkgs; [
-    swaylock
-    swayidle
-  ];
   wayland.windowManager.sway = {
     enable = true;
     config = rec {
