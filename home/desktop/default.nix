@@ -23,7 +23,6 @@
     ./gtk.nix
     ./sway.nix
     ./swaylock.nix
-    ./swayidle.nix
     ./waybar.nix
     ./wofi.nix
     ./vscode.nix
