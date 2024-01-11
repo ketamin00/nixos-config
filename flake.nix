@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    astronvim = {
+      url = "github:AstroNvim/AstroNvim";
+      flake = false;
+    };
+
     #nix-colors.url = "github:misterio77/nix-colors";
   };
 
@@ -17,6 +22,7 @@
     self,
     nixpkgs,
     home-manager,
+    astronvim,
     ...
   } @ inputs: let
     inherit (self) outputs;
