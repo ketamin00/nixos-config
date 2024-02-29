@@ -14,7 +14,6 @@
       url = "github:AstroNvim/AstroNvim";
       flake = false;
     };
-
   };
 
   outputs = {
